@@ -57,4 +57,9 @@ void main(List<String> arguments) {
   String tString3 = 'This is to count the is number of words in of this string';
   print('Count words: ${string_practice.countOccurrencesWords(tString3, false)}');
   print('Count words (case insensitive): ${string_practice.countOccurrencesWords(tString3, true)}');
+
+  String tString4 = 'This is a test';
+  String subStr = 'his';
+  print('Is $subStr substring: ${string_practice.isSubstring(tString4, subStr)}');
+  print('$subStr substring index: ${string_practice.subStringIndex(tString4, subStr)}');
 }

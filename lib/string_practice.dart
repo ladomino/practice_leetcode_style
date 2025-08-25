@@ -126,4 +126,16 @@ Map<String, int> countOccurrencesWords(String str, bool ignoreCase) {
   return occurrences;
 }
 
+bool isSubstring(String str, String subStr) {
+
+  // Use the 'contains' method to check if the substring is present in the string.
+  return str.contains(subStr);
+}
+
+int subStringIndex(String str, String subStr) {
+  // Use the 'indexOf' method to find the index of the substring in the string.
+  int index = str.indexOf(subStr);
+
+  return index;
+}
 
