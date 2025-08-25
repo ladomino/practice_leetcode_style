@@ -99,3 +99,31 @@ String replaceAllLtrs(String str1, String repl1, String repl2) {
 
   return result;
 }
+
+Map<String, int> countOccurrencesWords(String str, bool ignoreCase) {
+  Map<String, int> occurrences = {};
+
+  if (ignoreCase) {
+    str = str.toLowerCase();
+  }
+
+  List<String> ltrs = str.split(' ');
+
+  // Do not need to check if it contains the key
+  // We use the '??' operator to avoid null pointer exceptions.
+
+  // Use a for-in loop to iterate over the list of characters.
+  // If the character is already a key in the map, increment its value by 1.
+  // Otherwise, add the character as a new key with a value of 1.
+
+  // The '??' operator is a null-aware operator in Dart.
+  // It returns the right-hand side if the left-hand side is null,
+  // otherwise it returns the left-hand side.
+  for (String ltr in ltrs) {
+    occurrences[ltr] = (occurrences[ltr] ?? 0) + 1;
+  }
+
+  return occurrences;
+}
+
+

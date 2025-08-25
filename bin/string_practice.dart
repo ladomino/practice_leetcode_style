@@ -52,4 +52,9 @@ void main(List<String> arguments) {
 
   String tString2 = 'abcdabbacceeedaabb';
   print('Replace with x: ${string_practice.replaceAllLtrs(tString2, 'a', 'x')}`);');
+
+
+  String tString3 = 'This is to count the is number of words in of this string';
+  print('Count words: ${string_practice.countOccurrencesWords(tString3, false)}');
+  print('Count words (case insensitive): ${string_practice.countOccurrencesWords(tString3, true)}');
 }
