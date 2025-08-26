@@ -146,6 +146,7 @@ bool isPalindrome(String str1, bool ignoreCase, bool ignorePunctuation) {
   if (ignorePunctuation) {
 
     // Remove alphanumeric - punctuation using a regular expression.
+    // Not a-z and 0-9 will be replaced with an empty string.
     str1 = str1.replaceAll(RegExp(r'[^a-z0-9]'), '');
   }
   // Reverse the strings.
