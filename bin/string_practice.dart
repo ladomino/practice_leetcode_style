@@ -51,15 +51,30 @@ void main(List<String> arguments) {
   print('Uppercase letters: $upperLetters');
 
   String tString2 = 'abcdabbacceeedaabb';
-  print('Replace with x: ${string_practice.replaceAllLtrs(tString2, 'a', 'x')}`);');
-
+  print(
+    'Replace with x: ${string_practice.replaceAllLtrs(tString2, 'a', 'x')}`);',
+  );
 
   String tString3 = 'This is to count the is number of words in of this string';
-  print('Count words: ${string_practice.countOccurrencesWords(tString3, false)}');
-  print('Count words (case insensitive): ${string_practice.countOccurrencesWords(tString3, true)}');
+  print(
+    'Count words: ${string_practice.countOccurrencesWords(tString3, false)}',
+  );
+  print(
+    'Count words (case insensitive): ${string_practice.countOccurrencesWords(tString3, true)}',
+  );
 
   String tString4 = 'This is a test';
   String subStr = 'his';
-  print('Is $subStr substring: ${string_practice.isSubstring(tString4, subStr)}');
-  print('$subStr substring index: ${string_practice.subStringIndex(tString4, subStr)}');
+  print(
+    'Is $subStr substring: ${string_practice.isSubstring(tString4, subStr)}',
+  );
+  print(
+    '$subStr substring index: ${string_practice.subStringIndex(tString4, subStr)}',
+  );
+
+  String tString5 = 'radar';
+  print('Is $tString5 a palindrome: ${string_practice.isPalindrome(tString5, false, false)}');
+
+  String tString6 = 'ra -dar';
+  print('Is $tString6 a palindrome: ${string_practice.isPalindrome(tString5, false, true)}');
 }

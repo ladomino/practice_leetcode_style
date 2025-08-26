@@ -1,4 +1,3 @@
-
 String reverseString(String str) {
   String reversed = str.split('').reversed.join('');
 
@@ -127,7 +126,6 @@ Map<String, int> countOccurrencesWords(String str, bool ignoreCase) {
 }
 
 bool isSubstring(String str, String subStr) {
-
   // Use the 'contains' method to check if the substring is present in the string.
   return str.contains(subStr);
 }
@@ -139,3 +137,20 @@ int subStringIndex(String str, String subStr) {
   return index;
 }
 
+bool isPalindrome(String str1, bool ignoreCase, bool ignorePunctuation) {
+  // Convert both strings to lowercase if ignoreCase is true.
+  if (ignoreCase) {
+    str1 = str1.toLowerCase();
+  }
+
+  if (ignorePunctuation) {
+
+    // Remove alphanumeric - punctuation using a regular expression.
+    str1 = str1.replaceAll(RegExp(r'[^a-z0-9]'), '');
+  }
+  // Reverse the strings.
+  String reversedStr1 = reverseString(str1);
+
+  // Check if the reversed strings are equal.
+  return str1 == reversedStr1;
+}
